@@ -1,0 +1,120 @@
+body {
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+}
+.header {
+		margin-top: 2em;
+        text-align: center;
+}
+
+#tabs li {
+    background-color: skyblue;
+}
+
+#accordion h3 {
+    background-color: skyblue;
+}
+
+#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+}
+#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+}
+#icons {
+		margin: 0;
+		padding: 0;
+}
+#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+}
+#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+}
+	select {
+		width: 200px;
+}      
+
+
+.slidesjs-pagination {
+    text-align: center;
+}
+      
+.slidesjs-pagination-item {
+    display: inline;
+    padding: 0 20px;
+}
+
+.slidesjs-pagination-item a {
+    text-decoration: none;
+}
+      
+.slidesjs-pagination .active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+  
+
+/* Prevent the slideshow from flashing on load */
+    #slides {
+      display: none
+}
+
+/* Center the slideshow */
+    .container {
+      margin: 0 auto
+}
+
+/* Show active item in the pagination */
+.slidesjs-pagination .active {
+      color:red;
+}
+
+/* Media quires for a responsive layout */
+
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+      body {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .container {
+        width: auto
+      }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+}
+
+/* For smaller displays like laptops */
+@media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+}
+
+/* For larger displays */
+@media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<!-- Assign 8 Part 1 JQuery Events -->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JQUERY EVENTS</title>
+        <meta name="description" content="JQuery Events">
+<!--        <link rel="stylesheet" href="css/main.css">-->
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    </head>
+    <body>
+ 
+<!--1.Create a button on a web page. Use the .click() method to display an alert message to the user
+    indicating that the button has been clicked when the button is actually clicked.-->
+    <button type="button" id="btnID1">Click Me 1</button>    
+        
+<!--2.Create a button on a web page. Attach the click event using the .bind() method to display an alert
+    message to the user indicating that the button has been clicked when the button is actually clicked.-->
+    <button type="button" id="btnID2">Click Me 2</button>
+    
+<!--3.Create a button on a web page. Attach the click event using the .on() method to display an alert
+    message to the user indicating that the button has been clicked when the button is actually clicked.-->
+    <button type="button" id="btnID3">Click Me 3</button>
+
+<!--4.Create two buttons on a web page. Attach the click event to both buttons using a single handler using
+    the .on() method. Again, an alert message should be displayed to the user indicating that a button has been clicked when either of the buttons are actually clicked.-->
+    <button type="button" id="btnID4a">Click Me 4a</button>    
+    <button type="button" id="btnID4b">Click Me 4b</button>    
+
+<!--5.Create a div on a web page. Use jQuery to set the div element to 400px wide and 400px high. Attach
+    the click, mouseenter, and mouseleave events using the .on() method. Display an alert message to the user indicating that the div was either clicked on, the mouse entered it, or the mouse left it.-->
+    <div id="divID">DIV ELEMENT</div>    
+        
+<!--6.Rewrite the code from number 5. This time add a span tag to the web page. Display three different
+    messages within the span tag when the user enters the div, leaves the div, or clicks on the div.-->
+    <div id="divSpanID"><span id="spanID">SPAN ELEMENT</span></div>    
+        
+<!--7.Create a link within the web page and set its href attribute to browse to google.com. When the user
+    clicks the link, first, prevent it from redirecting to that web site. Second, programmatically style the link so that its color changes to red. Third, display the name of the node that triggered the event within an alert box.-->
+    <a id="aID" href="www.google.com">Google</a>    
+        
+<!--8.Create a div tag within the web page. As the user resizes the browser, display the width and height
+    of the browser window within the div tag.-->
+    <div id="div8ID">DIV8</div>
+        
+<!--9.Create a text field using the <input> tag. When the input has focus, set the background to a light
+    gray color. When the input does not have focus, reset the background back to a white color.-->
+    <input id="txtID" type="text"/>    
+
+<!--10.Add a form tag within a web page complete with 2 input fields: one that collects name and a second
+    that collects an email. Add a submit button. When the user submits the form, if any one of the two fields is left empty, display an alert box to the user indicating that the fields are required. Give the field that the user left empty a red border. If both fields have values in them, set their borders to green.-->
+    <form>
+       <input type="text" id="nameID"/> 
+       <input type="text" id="emailID"/> 
+       <input type="submit" id="submitID" /> 
+    </form>   
+        
+    <script>
+        
+    $(document).ready(function() {
+        //window.alert( "JQuery is working!" );
+        
+        //Assignment 8, Part 1
+
+//Practice with jQuery Events (5 points)	
+//In this part of the assignment you will practice working with jQuery events. Code the following within a //new web page to successfully complete this part of the assignment:
+//1.Create a button on a web page. Use the .click() method to display an alert message to the user //indicating that the button has been clicked when the button is actually clicked. 
+//$("#btnID1").on("click",function(){ window.alert("Button1 has been clicked"); });
+
+//2.Create a button on a web page. Attach the click event using the .bind() method to display an alert //message to the user indicating that the button has been clicked when the button is actually clicked. 
+//$("#btnID2").bind( "click", function() { window.alert( "You have clicked button2." ); });        
+        
+//3.Create a button on a web page. Attach the click event using the .on() method to display an alert //message to the user indicating that the button has been clicked when the button is actually clicked. 
+//$("#btnID3").on("click",function(){ window.alert("Button3 has been clicked"); });
+        
+//4.Create two buttons on a web page. Attach the click event to both buttons using a single handler using //the .on() method. Again, an alert message should be displayed to the user indicating that a button has //been clicked when either of the buttons are actually clicked. 
+//$('#btnID4a, #btnID4b').click(function() { 
+//   window.alert( "Either Button 4a or 4b was clicked!");
+//});
+        
+//5.Create a div on a web page. Use jQuery to set the div element to 400px wide and 400px high. Attach the //click, mouseenter, and mouseleave events using the .on() method. Display an alert message to the user //indicating that the div was either clicked on, the mouse entered it, or the mouse left it. 
+$("#divID").css("height", "400px").css("width", "400px").css("background-color","lightgray");
+
+//$("#divID").on("click mouseenter mouseleave",function(event){
+//    if      (event.type == "click") { window.alert("div was clicked")}
+//    else if (event.type == "mouseenter") { window.alert("div was entered")}
+//    else if (event.type == "mouseleave") { window.alert("div was exited")}
+//});
+               
+//6.Rewrite the code from number 5. This time add a span tag to the web page. Display three different //messages within the span tag when the user enters the div, leaves the div, or clicks on the div.
+$("#divSpanID").css("height", "400px").css("width", "400px").css("background-color","lightblue");
+$("#spanID").css("background-color","blue");
+
+//$("#spanID").on("click mouseenter mouseleave",function(event){
+//    if      (event.type == "click") { window.alert("span was clicked")}
+//    else if (event.type == "mouseenter") { window.alert("span was entered")}
+//    else if (event.type == "mouseleave") { window.alert("span was exited")}
+//});
+              
+//7.Create a link within the web page and set its href attribute to browse to google.com. When the user //clicks the link, first, prevent it from redirecting to that web site. Second, programmatically style the //link so that its color changes to red. Third, display the name of the node that triggered the event //within an alert box.
+//$("a").click(function(event){
+//    event.preventDefault();
+//    window.alert("Node that trigger the event is named " + event.target.nodeName);
+//}).css("color","red");
+        
+//8.Create a div tag within the web page. As the user resizes the browser, display the width and height of //the browser window within the div tag.
+       
+// $(window).resize(function() {
+//   $("#div8ID").empty();
+//   $("#div8ID").append($(window).height());
+//   $("#div8ID").append(" "); 
+//   $("#div8ID").append($(window).width());
+// });  
+        
+//9.Create a text field using the <input> tag. When the input has focus, set the background to a light gray //color. When the input does not have focus, reset the background back to a white color.
+//$("#txtID").focusin(function(){
+//    $("#txtID").css("background-color","lightgray");
+//})
+//$("#txtID").focusout(function(){
+//    $("#txtID").css("background-color","white");
+//})
+              
+//10.Add a form tag within a web page complete with 2 input fields: one that collects name and a second //that collects an email. Add a submit button. When the user submits the form, if any one of the two fields //is left empty, display an alert box to the user indicating that the fields are required. Give the field //that the user left empty a red border. If both fields have values in them, set their borders to green.
+$("#submitID").click(function(event){
+    event.preventDefault();
+    if ($("#nameID").val().length < 1){
+        $("#nameID").css("border","solid red 3px");
+        alert('Name is required');
+    }else{
+        $("#nameID").css("border","");
+    }
+    if ($("#emailID").val().length < 1){
+        $("#emailID").css("border","solid red 3px");
+        alert('Email is required');
+    }else{
+        $("#emailID").css("border","");
+    }  
+
+    if ( ($("#nameID").val().length  > 0)
+      && ($("#emailID").val().length > 0) )
+    {
+        $("#nameID").css("border","solid green 3px");
+        $("#emailID").css("border","solid green 3px");
+    }
+});
+     
+    });
+        
+    </script>
+        
+    </body>
+</html>
+<!--End of File-->

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 - Calculator III</title>
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>    
+    
+</head>
+
+<body>
+	<input type="text" readonly id="result">
+    <br>
+    <div id="container">
+        <input type="button" id="seven" value="7">
+        <input type="button" id="eight" value="8">
+        <input type="button" id="nine" value="9">
+        <input type="button" id="divide" value="/">
+        <br>
+        <input type="button" id="four" value="4">
+        <input type="button" id="five" value="5">
+        <input type="button" id="six" value="6">
+        <input type="button" id="multiply" value="*">
+        <br>
+        <input type="button" id="one" value="1">
+        <input type="button" id="two" value="2">
+        <input type="button" id="three" value="3">
+        <input type="button" id="subtract" value="-">
+        <br>
+        <input type="button" id="zero" value="0">
+        <input type="button" id="period" value=".">
+        <input type="button" id="add" value="+">
+        <input type="button" id="equal" value="=">
+    </div>
+    
+    
+    <script>
+            
+//The Calculator III (5 points)
+//In this part of the assignment you will practice working with jQuery events, styles, and DOM manipulation //to create an even better version of the calculator that you created in previous assignments. In this part //of the assignment you will use jQuery events to handle the interaction between the user and each button //in the calculator. You will also use jQuery styling techniques to stylize all of the calculator buttons //and the display. To complete this, follow the steps outlined below:
+//1.Notice the markup that I’ve included for you in the web page. There is a text box that will display //the value of each button click and 16 different buttons each of which represents a major key on a basic //calculator. Begin by referencing the jQuery library and then immediately wire up the jQuery .ready() //function. 
+$(document).ready(function() {
+//2.This first part will require you to stylize all of the buttons programmatically. 
+//Using jQuery make each button the same width and height, 
+//             give each button a unique background color, border style, width and color. 
+//Also, give the display a unique background color, set the font color and size, and 
+//set a unique border style, width, and color.
+$("div input").css({"width":"60","height":"60","font-size":"2em"});
+
+$("#seven").css({"background-color":"yellow","border":"solid black 1px","color":"pink"});
+$("#eight").css({"background-color":"pink","border":"solid black 1px","color":"blue"});
+$("#nine").css({"background-color":"green","border":"solid black 1px","color":"lightblue"});
+$("#divide").css({"background-color":"tan","border":"solid black 1px","color":"yellow"});
+
+$("#four").css({"background-color":"blue","border":"solid black 1px","color":"aqua"});
+$("#five").css({"background-color":"tan","border":"solid black 1px","color":"lightorange"});
+$("#six").css({"background-color":"light-blue","border":"solid black 1px","color":"lightgray"});
+$("#multiply").css({"background-color":"light-blue","border":"solid black 1px","color":"orange"});
+
+$("#one").css({"background-color":"light-blue","border":"solid black 1px","color":"lightgreen"});
+$("#two").css({"background-color":"violet","border":"solid black 1px","color":"lightblue"});
+$("#three").css({"background-color":"red","border":"solid black 1px","color":"lightbrown"});
+$("#subtract").css({"background-color":"tan","border":"solid black 1px","color":"violet"});
+
+$("#zero").css({"background-color":"pink","border":"solid black 1px","color":"orange"});
+$("#period").css({"background-color":"light-blue","border":"solid black 1px","color":"black"});
+$("#add").css({"background-color":"grey","border":"solid black 1px","color":"lightyellow"});
+$("#equal").css({"background-color":"light-blue","border":"solid black 1px","color":"blue"});
+
+//3.Reference the “bubble capture” code from assignment 6. Rewrite this code so that it uses jQuery events //and makes use of jQuery DOM manipulation techniques to set the display based on button selections made.
+$("div").click(function (event) {
+  var target = $(event.target);
+  if       (target.is($("#seven"))) {
+    $("#seven").css("color","pink");
+  }else if (target.is($("#eight"))) {
+    $("#eight").css("color","pink");
+  }else if (target.is($("#nine"))) {
+    $("#nine").css("color","pink");
+  }else if (target.is($("#divide"))) {
+    $("#divide").css("color","pink");
+  }else if (target.is($("#four"))) {
+    $("#four").css("color","pink");
+  }else if (target.is($("#five"))) {
+    $("#five").css("color","pink");
+  }else if (target.is($("#six"))) {
+    $("#six").css("color","pink");
+  }else if (target.is($("#multiply"))) {
+    $("#multiply").css("color","pink");
+  }else if (target.is($("#one"))) {
+    $("#one").css("color","pink");
+  }else if (target.is($("#two"))) {
+    $("#two").css("color","pink"  );
+  }else if (target.is($("#three"))) {
+    $("#three").css("color","pink");
+  }else if (target.is($("#subtract"))) {
+    $("#subtract").css("color","pink");
+  }else if (target.is($("#zero"))) {
+    $("#zero").css("color","pink");
+  }else if (target.is($("#period"))) {
+    $("#period").css("color","pink");
+  }else if (target.is($("#add"))) {
+    $("#add").css("color","pink");
+  }else if (target.is($("#equal"))) {
+    $("#nine").css("color","pink");
+  }   
+});
+    
+    
+
+    });
+        
+    </script>
+</body>
+</html>
